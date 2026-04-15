@@ -242,10 +242,6 @@ La regla utiliza la convención **PascalCase** para identificar componentes Reac
 | TypeScript con JSX (`.tsx`) | ✅ Sí     |
 | Babel                       | ✅ Sí     |
 
-## Reglas relacionadas
-
-- [`react/no-direct-mutation-state`](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md) - Evita mutaciones directas de estado
-- [`react-hooks/exhaustive-deps`](https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks) - Gestiona dependencias en hooks
 
 ## Licencia
 
