@@ -23,7 +23,7 @@ npm install --save-dev /ruta/completa/al/plugin/no-self-recursive
 #### Si está en GitHub:
 
 ```bash
-npm install --save-dev github:usuario/no-self-recursive
+npm install --save-dev github:usuario/no-self-recursive-jsx
 ```
 
 ### Paso 2: Agregar a `package.json` (si lo usas sin `.eslintrc`)

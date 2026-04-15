@@ -49,9 +49,9 @@ npm install --save-dev /ruta/a/no-self-recursive
 ### Opción 3: Desde GitHub
 
 ```bash
-npm install --save-dev github:usuario/no-self-recursive
+npm install --save-dev github:usuario/no-self-recursive-jsx
 # o
-npm install --save-dev github:usuario/no-self-recursive#main
+npm install --save-dev github:usuario/no-self-recursive-jsx#main
 ```
 
 ### Opción 4: Como tarball local
