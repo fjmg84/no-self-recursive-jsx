@@ -43,7 +43,7 @@ pnpm add -D /ruta/a/no-self-recursive
 **Ejemplo:**
 
 ```bash
-npm install --save-dev /Users/fjmgqba/Documents/Proyectos\ Personales/no-self-recursive
+npm install --save-dev /ruta/a/no-self-recursive
 ```
 
 ### Opción 3: Desde GitHub
