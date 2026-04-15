@@ -2,6 +2,8 @@
 
 Una regla ESLint que previene que componentes React se rendericen a sí mismos de forma recursiva, evitando bucles infinitos y comportamientos inesperados.
 
+> 📖 **¿Primera vez?** Consulta la [Guía de Instalación Detallada](./INSTALL.md) para tu tipo de proyecto (Next.js, CRA, Vite, etc.)
+
 ## Descripción
 
 Esta regla detecta dos tipos de auto-recursión en componentes React:
@@ -18,13 +20,67 @@ La regla funciona con:
 
 ## Instalación
 
+### Opción 1: Desde npm (cuando esté publicado)
+
 ```bash
-npm install --save-dev no-self-recursive
+npm install --save-dev eslint-plugin-no-self-recursive
 # o
-pnpm add -D no-self-recursive
+pnpm add -D eslint-plugin-no-self-recursive
+# o
+yarn add --dev eslint-plugin-no-self-recursive
+```
+
+### Opción 2: Desde un proyecto local
+
+Si tienes el plugin en tu máquina:
+
+```bash
+npm install --save-dev /ruta/a/no-self-recursive
+# o
+pnpm add -D /ruta/a/no-self-recursive
+```
+
+**Ejemplo:**
+
+```bash
+npm install --save-dev /Users/fjmgqba/Documents/Proyectos\ Personales/no-self-recursive
+```
+
+### Opción 3: Desde GitHub
+
+```bash
+npm install --save-dev github:usuario/no-self-recursive
+# o
+npm install --save-dev github:usuario/no-self-recursive#main
+```
+
+### Opción 4: Como tarball local
+
+1. En el proyecto del plugin:
+
+```bash
+npm pack
+# Genera: eslint-plugin-no-self-recursive-1.0.0.tgz
+```
+
+2. En el proyecto donde quieres usar:
+
+```bash
+npm install --save-dev /ruta/a/eslint-plugin-no-self-recursive-1.0.0.tgz
 ```
 
 ## Configuración
+
+### 1. Encuentra el archivo `.eslintrc`
+
+Busca en tu proyecto:
+
+- `.eslintrc.json`
+- `.eslintrc.js`
+- `.eslintrc.yml`
+- O la sección `"eslintConfig"` en `package.json`
+
+### 2. Agrega el plugin
 
 En tu archivo `.eslintrc.json`:
 
@@ -37,7 +93,7 @@ En tu archivo `.eslintrc.json`:
 }
 ```
 
-O en `.eslintrc.js`:
+En tu archivo `.eslintrc.js`:
 
 ```javascript
 module.exports = {
@@ -47,6 +103,37 @@ module.exports = {
   },
 };
 ```
+
+En `package.json`:
+
+```json
+{
+  "eslintConfig": {
+    "plugins": ["no-self-recursive"],
+    "rules": {
+      "no-self-recursive/no-self-recursive": "error"
+    }
+  }
+}
+```
+
+### 3. Escala de severidad
+
+Puedes cambiar la severidad:
+
+```json
+{
+  "rules": {
+    "no-self-recursive/no-self-recursive": "error",
+    "no-self-recursive/no-self-recursive": "warn",
+    "no-self-recursive/no-self-recursive": "off"
+  }
+}
+```
+
+- **`error`** (❌): Detiene el linting, falla el build
+- **`warn`** (⚠️): Solo advierte, no falla el build
+- **`off`**: Desactiva la regla
 
 ## Ejemplos
 

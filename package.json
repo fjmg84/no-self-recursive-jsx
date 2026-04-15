@@ -1,10 +1,13 @@
 {
-  "name": "no-self-recursive",
+  "name": "eslint-plugin-no-self-recursive",
   "version": "1.0.0",
-  "description": "",
+  "description": "ESLint plugin that prevents React components from rendering themselves recursively",
   "main": "index.js",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "peerDependencies": {
+    "eslint": "^8.0.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.28.6",
@@ -12,7 +15,15 @@
     "eslint": "^8.57.0",
     "jest": "^29.7.0"
   },
-  "keywords": [],
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "react",
+    "recursion",
+    "self-recursive",
+    "jsx",
+    "typescript"
+  ],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.33.0"
